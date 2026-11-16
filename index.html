@@ -1,0 +1,170 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TaskFlow helps you organize tasks, manage projects and improve productivity.">
+    <title>TaskFlow - Work Smarter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <a href="#home" class="logo">Task<span>Flow.</span></a>
+
+        <nav class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#features">Features</a>
+            <a href="#about">About</a>
+            <a href="#pricing">Pricing</a>
+        </nav>
+
+        <a href="#contact" class="nav-btn">Get Started</a>
+    </header>
+
+    <main>
+
+        <!-- HERO SECTION -->
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <p class="tagline">YOUR PRODUCTIVITY PARTNER</p>
+
+                <h1>Manage Your Work.<br>
+                    <span>Achieve More.</span>
+                </h1>
+
+                <p class="hero-description">
+                    Organize your tasks, manage projects and achieve
+                    your goals with one simple productivity platform.
+                </p>
+
+                <a href="#contact" class="primary-btn">Get Started Free</a>
+            </div>
+
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=900"
+                     alt="Workspace with laptop and planning documents">
+            </div>
+        </section>
+
+        <!-- FEATURES SECTION -->
+        <section class="features section" id="features">
+            <div class="section-heading">
+                <p class="tagline">WHAT WE OFFER</p>
+                <h2>Everything You Need to Stay Productive</h2>
+                <p>Powerful tools to make your everyday work easier.</p>
+            </div>
+
+            <div class="feature-container">
+                <div class="feature-card">
+                    <div class="feature-icon">📋</div>
+                    <h3>Task Management</h3>
+                    <p>Create, organize and manage your daily tasks easily.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Progress Tracking</h3>
+                    <p>Track your progress and understand your productivity.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">⏰</div>
+                    <h3>Smart Reminders</h3>
+                    <p>Stay on schedule and never miss important deadlines.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT SECTION -->
+        <section class="about section" id="about">
+            <div class="about-image">
+                <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=900"
+                     alt="Modern productive office workspace">
+            </div>
+
+            <div class="about-content">
+                <p class="tagline">ABOUT TASKFLOW</p>
+                <h2>Work Smarter, Not Harder</h2>
+                <p>
+                    TaskFlow is designed to simplify the way you work.
+                    Whether you are a student, freelancer or professional,
+                    you can manage your work from one place.
+                </p>
+
+                <h3>How it works</h3>
+                <p>01. Create your tasks and set priorities.</p>
+                <p>02. Organize your work and deadlines.</p>
+                <p>03. Track your progress and achieve your goals.</p>
+            </div>
+        </section>
+
+        <!-- PRICING SECTION -->
+        <section class="pricing section" id="pricing">
+            <div class="section-heading">
+                <p class="tagline">SIMPLE PRICING</p>
+                <h2>Choose Your Plan</h2>
+                <p>Start free and upgrade when you need more.</p>
+            </div>
+
+            <div class="pricing-container">
+                <div class="price-card">
+                    <h3>Free Plan</h3>
+                    <h2>₹0 <span>/month</span></h2>
+                    <p>Perfect for getting started.</p>
+                    <ul>
+                        <li>✓ Basic task management</li>
+                        <li>✓ Progress tracking</li>
+                        <li>✓ Daily reminders</li>
+                    </ul>
+                    <a href="#contact" class="secondary-btn">Get Started</a>
+                </div>
+
+                <div class="price-card popular">
+                    <p class="popular-label">POPULAR</p>
+                    <h3>Pro Plan</h3>
+                    <h2>₹299 <span>/month</span></h2>
+                    <p>For people who want more.</p>
+                    <ul>
+                        <li>✓ Everything in Free</li>
+                        <li>✓ Advanced reports</li>
+                        <li>✓ Priority support</li>
+                    </ul>
+                    <a href="#contact" class="primary-btn">Choose Pro</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section class="contact section" id="contact">
+            <div class="section-heading">
+                <p class="tagline">GET IN TOUCH</p>
+                <h2>Ready to Get More Done?</h2>
+                <p>Leave your details and we'll get in touch.</p>
+            </div>
+
+            <form id="contact-form">
+                <input type="text" id="name" placeholder="Your Name" required>
+                <input type="email" id="email" placeholder="Your Email" required>
+                <textarea id="message" placeholder="Your Message" required></textarea>
+
+                <button type="submit" class="primary-btn">Send Message</button>
+
+                <p id="success-message" role="status" aria-live="polite"></p>
+            </form>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <h2>TaskFlow.</h2>
+        <p>Making productivity simple, one task at a time.</p>
+        <p>© 2026 TaskFlow. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

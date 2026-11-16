@@ -1,0 +1,526 @@
+
+/* =========================
+   1. GLOBAL STYLING
+========================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: #25213d;
+    background-color: #ffffff;
+    line-height: 1.6;
+}
+
+:root {
+    --primary: #7054e8;
+    --primary-dark: #5940cb;
+    --light-purple: #f4f1ff;
+    --dark: #25213d;
+    --text: #77748a;
+    --white: #ffffff;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.section {
+    padding: 90px 8%;
+}
+
+/* =========================
+   2. NAVBAR
+========================= */
+
+.navbar {
+    height: 85px;
+    padding: 0 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--white);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.04);
+}
+
+.logo {
+    font-size: 27px;
+    font-weight: 800;
+    color: var(--dark);
+}
+
+.logo span {
+    color: var(--primary);
+}
+
+.nav-links {
+    display: flex;
+    gap: 35px;
+}
+
+.nav-links a {
+    color: var(--text);
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--primary);
+}
+
+.nav-btn,
+.primary-btn {
+    display: inline-block;
+    background: var(--primary);
+    color: var(--white);
+    padding: 13px 25px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.nav-btn:hover,
+.primary-btn:hover {
+    background: var(--primary-dark);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(112, 84, 232, 0.2);
+}
+
+/* =========================
+   3. HERO SECTION
+========================= */
+
+.hero {
+    min-height: 590px;
+    padding: 75px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    background: linear-gradient(120deg, #faf9ff, #f0edff);
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.tagline {
+    color: var(--primary);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    font-size: clamp(38px, 5vw, 62px);
+    line-height: 1.15;
+    color: var(--dark);
+    margin-bottom: 25px;
+    font-weight: 800;
+}
+
+.hero h1 span {
+    color: var(--primary);
+}
+
+.hero-description {
+    color: var(--text);
+    font-size: 16px;
+    max-width: 470px;
+    margin-bottom: 30px;
+}
+
+.hero-image {
+    flex: 1;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 570px;
+    height: 390px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(45, 35, 90, 0.15);
+}
+
+/* =========================
+   4. SECTION HEADINGS
+========================= */
+
+.section-heading {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 50px;
+}
+
+.section-heading h2 {
+    font-size: 34px;
+    line-height: 1.3;
+    color: var(--dark);
+    margin-bottom: 15px;
+}
+
+.section-heading > p:last-child {
+    color: var(--text);
+    font-size: 15px;
+}
+
+/* =========================
+   5. FEATURES SECTION
+========================= */
+
+.features {
+    background: var(--white);
+}
+
+.feature-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.feature-card {
+    padding: 35px 28px;
+    background: #ffffff;
+    border: 1px solid #eeeafc;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(80, 60, 150, 0.1);
+    border-color: var(--primary);
+}
+
+.feature-icon {
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+.feature-card h3 {
+    font-size: 19px;
+    margin-bottom: 12px;
+    color: var(--dark);
+}
+
+.feature-card p {
+    color: var(--text);
+    font-size: 14px;
+}
+
+/* =========================
+   6. ABOUT SECTION
+========================= */
+
+.about {
+    display: flex;
+    align-items: center;
+    gap: 70px;
+    background: var(--light-purple);
+}
+
+.about-image,
+.about-content {
+    flex: 1;
+}
+
+.about-image img {
+    width: 100%;
+    height: 390px;
+    object-fit: cover;
+    border-radius: 18px;
+}
+
+.about-content h2 {
+    font-size: 36px;
+    line-height: 1.3;
+    margin-bottom: 20px;
+    color: var(--dark);
+}
+
+.about-content > p:not(.tagline) {
+    color: var(--text);
+    margin-bottom: 18px;
+    font-size: 15px;
+}
+
+.about-content h3 {
+    margin: 22px 0 12px;
+    color: var(--primary);
+}
+
+/* =========================
+   7. PRICING SECTION
+========================= */
+
+.pricing {
+    background: var(--white);
+}
+
+.pricing-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 350px));
+    justify-content: center;
+    gap: 30px;
+}
+
+.price-card {
+    padding: 35px;
+    border: 1px solid #e9e5f7;
+    border-radius: 18px;
+    position: relative;
+    transition: 0.3s;
+}
+
+.price-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px rgba(80, 60, 150, 0.1);
+}
+
+.price-card h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.price-card h2 {
+    font-size: 38px;
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+.price-card h2 span {
+    font-size: 14px;
+    color: var(--text);
+    font-weight: 400;
+}
+
+.price-card > p:not(.popular-label) {
+    color: var(--text);
+    font-size: 14px;
+}
+
+.price-card ul {
+    list-style: none;
+    margin: 25px 0;
+}
+
+.price-card li {
+    padding: 9px 0;
+    color: var(--text);
+    font-size: 14px;
+}
+
+.secondary-btn {
+    display: inline-block;
+    padding: 12px 22px;
+    border: 1px solid var(--primary);
+    border-radius: 8px;
+    color: var(--primary);
+    font-weight: 600;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.secondary-btn:hover {
+    background: var(--primary);
+    color: white;
+}
+
+.popular {
+    border: 2px solid var(--primary);
+    background: #faf9ff;
+}
+
+.popular-label {
+    position: absolute;
+    top: -14px;
+    right: 20px;
+    background: var(--primary);
+    color: white;
+    padding: 5px 14px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+/* =========================
+   8. CONTACT SECTION
+========================= */
+
+.contact {
+    background: var(--light-purple);
+}
+
+#contact-form {
+    max-width: 550px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+#contact-form input,
+#contact-form textarea {
+    width: 100%;
+    padding: 16px;
+    border: 1px solid #e3def5;
+    border-radius: 8px;
+    outline: none;
+    font-family: inherit;
+    font-size: 14px;
+    background: white;
+}
+
+#contact-form input:focus,
+#contact-form textarea:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(112, 84, 232, 0.1);
+}
+
+#contact-form textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+#contact-form button {
+    width: 100%;
+    font-family: inherit;
+}
+
+#success-message {
+    color: #16834b;
+    text-align: center;
+    font-weight: 600;
+}
+
+/* =========================
+   9. FOOTER
+========================= */
+
+footer {
+    background: #211c37;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+footer h2 {
+    color: #a28dfc;
+    margin-bottom: 10px;
+}
+
+footer p {
+    color: #c0bbd1;
+    font-size: 13px;
+    margin-top: 8px;
+}
+
+/* =========================
+   10. RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 900px) {
+
+    .hero {
+        gap: 30px;
+    }
+
+    .hero-image img {
+        height: 320px;
+    }
+
+    .about {
+        gap: 35px;
+    }
+
+    .feature-container {
+        gap: 15px;
+    }
+}
+
+@media (max-width: 650px) {
+
+    .navbar {
+        height: auto;
+        min-height: 75px;
+        padding: 18px 5%;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .nav-links {
+        order: 3;
+        width: 100%;
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    .nav-btn {
+        padding: 10px 14px;
+        font-size: 12px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 65px 6%;
+    }
+
+    .hero-description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-image img {
+        height: 260px;
+    }
+
+    .section {
+        padding: 65px 6%;
+    }
+
+    .section-heading h2 {
+        font-size: 27px;
+    }
+
+    .feature-container {
+        grid-template-columns: 1fr;
+    }
+
+    .about {
+        flex-direction: column;
+    }
+
+    .about-image img {
+        height: 260px;
+    }
+
+    .about-content h2 {
+        font-size: 29px;
+    }
+
+    .pricing-container {
+        grid-template-columns: 1fr;
+    }
+}
